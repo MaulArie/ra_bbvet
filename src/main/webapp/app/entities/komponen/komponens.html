@@ -1,0 +1,66 @@
+<div>
+    <h2>Komponens</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="komponen.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span >
+                        Create new Komponen
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span>ID</span></th>
+                    <th><span translate="raBbvetApp.komponen.kd_komponen">Kd Komponen</span></th>
+                    <th><span>Komponen</span></th>
+                    <th><span translate="raBbvetApp.komponen.biaya_komponen">Biaya Komponen</span></th>
+                    <th><span translate="raBbvetApp.komponen.komponen_update">Komponen Update</span></th>
+                    <th><span>Kdkomponen Output</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="komponen in vm.komponens track by komponen.id">
+                    <td><a ui-sref="komponen-detail({id:komponen.id})">{{komponen.id}}</a></td>
+                    <td>{{komponen.kd_komponen}}</td>
+                    <td>{{komponen.komponen}}</td>
+                    <td>{{komponen.biaya_komponen}}</td>
+                    <td>{{komponen.komponen_update | date:'medium'}}</td>
+                    <td>
+                        <a ui-sref="output-detail({id:komponen.kdkomponenOutput.id})">{{komponen.kdkomponenOutput.kd_output}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="komponen-detail({id:komponen.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="komponen.edit({id:komponen.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="komponen.delete({id:komponen.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

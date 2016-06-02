@@ -1,0 +1,60 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myKegiatanLabel">Create or edit a Kegiatan</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.kegiatan.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.kegiatan.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="raBbvetApp.kegiatan.kd_kegiatan" for="field_kd_kegiatan">Kd Kegiatan</label>
+            <input type="text" class="form-control" name="kd_kegiatan" id="field_kd_kegiatan"
+                    ng-model="vm.kegiatan.kd_kegiatan"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_kegiatan">Kegiatan</label>
+            <input type="text" class="form-control" name="kegiatan" id="field_kegiatan"
+                    ng-model="vm.kegiatan.kegiatan"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="raBbvetApp.kegiatan.biaya_kegiatan" for="field_biaya_kegiatan">Biaya Kegiatan</label>
+            <input type="number" class="form-control" name="biaya_kegiatan" id="field_biaya_kegiatan"
+                    ng-model="vm.kegiatan.biaya_kegiatan"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="raBbvetApp.kegiatan.kegiatan_update" for="field_kegiatan_update">Kegiatan Update</label>
+                <div class="input-group">
+                    <input id="field_kegiatan_update" type="text" class="form-control" name="kegiatan_update" datetime-picker="{{dateformat}}" ng-model="vm.kegiatan.kegiatan_update" is-open="vm.datePickerOpenStatus.kegiatan_update"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('kegiatan_update')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+
+        <div class="form-group">
+            <label translate="raBbvetApp.kegiatan.kd_programKegiatan" for="field_kd_programKegiatan">Kd Program Kegiatan</label>
+            <select class="form-control" id="field_kd_programKegiatan" name="kd_programKegiatan" ng-model="vm.kegiatan.kd_programKegiatan" ng-options="program as program.kd_program for program in vm.programs track by program.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

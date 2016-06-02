@@ -1,0 +1,26 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "kd_akun",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "akun",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "biaya_akun",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "akun_update",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "changelogDate": "20160530142342",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "akun",
+    "pagination": "no"
+}

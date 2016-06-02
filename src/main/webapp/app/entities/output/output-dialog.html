@@ -1,0 +1,72 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myOutputLabel">Create or edit a Output</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.output.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.output.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="raBbvetApp.output.kd_output" for="field_kd_output">Kd Output</label>
+            <input type="text" class="form-control" name="kd_output" id="field_kd_output"
+                    ng-model="vm.output.kd_output"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_output">Output</label>
+            <input type="text" class="form-control" name="output" id="field_output"
+                    ng-model="vm.output.output"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="raBbvetApp.output.volume_output" for="field_volume_output">Volume Output</label>
+            <input type="number" class="form-control" name="volume_output" id="field_volume_output"
+                    ng-model="vm.output.volume_output"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="raBbvetApp.output.satuan_output" for="field_satuan_output">Satuan Output</label>
+            <input type="text" class="form-control" name="satuan_output" id="field_satuan_output"
+                    ng-model="vm.output.satuan_output"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="raBbvetApp.output.biaya_output" for="field_biaya_output">Biaya Output</label>
+            <input type="number" class="form-control" name="biaya_output" id="field_biaya_output"
+                    ng-model="vm.output.biaya_output"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="raBbvetApp.output.output_update" for="field_output_update">Output Update</label>
+                <div class="input-group">
+                    <input id="field_output_update" type="text" class="form-control" name="output_update" datetime-picker="{{dateformat}}" ng-model="vm.output.output_update" is-open="vm.datePickerOpenStatus.output_update"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('output_update')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+
+        <div class="form-group">
+            <label translate="raBbvetApp.output.kd_kegiatanOutput" for="field_kd_kegiatanOutput">Kd Kegiatan Output</label>
+            <select class="form-control" id="field_kd_kegiatanOutput" name="kd_kegiatanOutput" ng-model="vm.output.kd_kegiatanOutput" ng-options="kegiatan as kegiatan.kd_kegiatan for kegiatan in vm.kegiatans track by kegiatan.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

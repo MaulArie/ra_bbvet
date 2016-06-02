@@ -1,0 +1,33 @@
+{
+    "relationships": [
+        {
+            "relationshipName": "kdsubKomponen",
+            "otherEntityName": "komponen",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "kd_komponen"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "kd_subkomponen",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "subkomponen",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "biaya_subkomponen",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "subkomponen_update",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "changelogDate": "20160530141751",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "subkomponen",
+    "pagination": "no"
+}

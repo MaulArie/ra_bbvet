@@ -1,0 +1,30 @@
+
+<div>
+    <h2><span>Program</span> {{vm.program.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="raBbvetApp.program.kd_program">Kd Program</span></dt>
+        <dd>
+            <span>{{vm.program.kd_program}}</span>
+        </dd>
+        <dt><span>Program</span></dt>
+        <dd>
+            <span>{{vm.program.program}}</span>
+        </dd>
+        <dt><span translate="raBbvetApp.program.biaya_program">Biaya Program</span></dt>
+        <dd>
+            <span>{{vm.program.biaya_program}}</span>
+        </dd>
+        <dt><span translate="raBbvetApp.program.program_update">Program Update</span></dt>
+        <dd>
+            <span>{{vm.program.program_update | date:'medium'}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+</div>

@@ -1,0 +1,39 @@
+{
+    "relationships": [
+        {
+            "relationshipName": "kdsubOutput",
+            "otherEntityName": "output",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "kd_output"
+        },
+        {
+            "relationshipName": "kdsubOuputKegiatan",
+            "otherEntityName": "kegiatan",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "kd_kegiatan"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "kd_suboutput",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "suboutput",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "biaya_suboutput",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "suboutput_update",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "changelogDate": "20160530141043",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "suboutput",
+    "pagination": "no"
+}

@@ -1,0 +1,69 @@
+{
+    "relationships": [
+        {
+            "relationshipName": "kddetailProgram",
+            "otherEntityName": "program",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "kd_program"
+        },
+        {
+            "relationshipName": "kddetailKegiatan",
+            "otherEntityName": "kegiatan",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "kd_kegiatan"
+        },
+        {
+            "relationshipName": "kddetailOutput",
+            "otherEntityName": "output",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "kd_output"
+        },
+        {
+            "relationshipName": "kddetailSuboutput",
+            "otherEntityName": "suboutput",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "kd_suboutput"
+        },
+        {
+            "relationshipName": "kddetailKomponen",
+            "otherEntityName": "komponen",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "kd_komponen"
+        },
+        {
+            "relationshipName": "kddetailSubkomponen",
+            "otherEntityName": "subkomponen",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "kd_subkomponen"
+        },
+        {
+            "relationshipName": "kddetailAkun",
+            "otherEntityName": "akun",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "kd_akun"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "detail",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "volume_detail",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "satuan_detail",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "biaya_detail",
+            "fieldType": "Long"
+        }
+    ],
+    "changelogDate": "20160530143206",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "detail",
+    "pagination": "no"
+}

@@ -1,0 +1,41 @@
+{
+    "relationships": [
+        {
+            "relationshipName": "kd_kegiatanOutput",
+            "otherEntityName": "kegiatan",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "kd_kegiatan"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "kd_output",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "output",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "volume_output",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "satuan_output",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "biaya_output",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "output_update",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "changelogDate": "20160527092432",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "output",
+    "pagination": "no"
+}

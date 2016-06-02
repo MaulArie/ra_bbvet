@@ -1,0 +1,26 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "kd_program",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "program",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "biaya_program",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "program_update",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "changelogDate": "20160527082329",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "program",
+    "pagination": "no"
+}

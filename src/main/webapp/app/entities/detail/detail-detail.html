@@ -1,0 +1,58 @@
+
+<div>
+    <h2><span>Detail</span> {{vm.detail.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Detail</span></dt>
+        <dd>
+            <span>{{vm.detail.detail}}</span>
+        </dd>
+        <dt><span translate="raBbvetApp.detail.volume_detail">Volume Detail</span></dt>
+        <dd>
+            <span>{{vm.detail.volume_detail}}</span>
+        </dd>
+        <dt><span translate="raBbvetApp.detail.satuan_detail">Satuan Detail</span></dt>
+        <dd>
+            <span>{{vm.detail.satuan_detail}}</span>
+        </dd>
+        <dt><span translate="raBbvetApp.detail.biaya_detail">Biaya Detail</span></dt>
+        <dd>
+            <span>{{vm.detail.biaya_detail}}</span>
+        </dd>
+        <dt><span>Kddetail Program</span></dt>
+        <dd>
+            <a ui-sref="program-detail({id:vm.detail.kddetailProgram.id})">{{vm.detail.kddetailProgram.kd_program}}</a>
+        </dd>
+        <dt><span>Kddetail Kegiatan</span></dt>
+        <dd>
+            <a ui-sref="kegiatan-detail({id:vm.detail.kddetailKegiatan.id})">{{vm.detail.kddetailKegiatan.kd_kegiatan}}</a>
+        </dd>
+        <dt><span>Kddetail Output</span></dt>
+        <dd>
+            <a ui-sref="output-detail({id:vm.detail.kddetailOutput.id})">{{vm.detail.kddetailOutput.kd_output}}</a>
+        </dd>
+        <dt><span>Kddetail Suboutput</span></dt>
+        <dd>
+            <a ui-sref="suboutput-detail({id:vm.detail.kddetailSuboutput.id})">{{vm.detail.kddetailSuboutput.kd_suboutput}}</a>
+        </dd>
+        <dt><span>Kddetail Komponen</span></dt>
+        <dd>
+            <a ui-sref="komponen-detail({id:vm.detail.kddetailKomponen.id})">{{vm.detail.kddetailKomponen.kd_komponen}}</a>
+        </dd>
+        <dt><span>Kddetail Subkomponen</span></dt>
+        <dd>
+            <a ui-sref="subkomponen-detail({id:vm.detail.kddetailSubkomponen.id})">{{vm.detail.kddetailSubkomponen.kd_subkomponen}}</a>
+        </dd>
+        <dt><span>Kddetail Akun</span></dt>
+        <dd>
+            <a ui-sref="akun-detail({id:vm.detail.kddetailAkun.id})">{{vm.detail.kddetailAkun.kd_akun}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+</div>

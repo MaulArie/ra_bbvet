@@ -1,0 +1,60 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myKomponenLabel">Create or edit a Komponen</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.komponen.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.komponen.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="raBbvetApp.komponen.kd_komponen" for="field_kd_komponen">Kd Komponen</label>
+            <input type="text" class="form-control" name="kd_komponen" id="field_kd_komponen"
+                    ng-model="vm.komponen.kd_komponen"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_komponen">Komponen</label>
+            <input type="text" class="form-control" name="komponen" id="field_komponen"
+                    ng-model="vm.komponen.komponen"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="raBbvetApp.komponen.biaya_komponen" for="field_biaya_komponen">Biaya Komponen</label>
+            <input type="number" class="form-control" name="biaya_komponen" id="field_biaya_komponen"
+                    ng-model="vm.komponen.biaya_komponen"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="raBbvetApp.komponen.komponen_update" for="field_komponen_update">Komponen Update</label>
+                <div class="input-group">
+                    <input id="field_komponen_update" type="text" class="form-control" name="komponen_update" datetime-picker="{{dateformat}}" ng-model="vm.komponen.komponen_update" is-open="vm.datePickerOpenStatus.komponen_update"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('komponen_update')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+
+        <div class="form-group">
+            <label for="field_kdkomponenOutput">Kdkomponen Output</label>
+            <select class="form-control" id="field_kdkomponenOutput" name="kdkomponenOutput" ng-model="vm.komponen.kdkomponenOutput" ng-options="output as output.kd_output for output in vm.outputs track by output.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

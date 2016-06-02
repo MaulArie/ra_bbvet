@@ -1,0 +1,33 @@
+{
+    "relationships": [
+        {
+            "relationshipName": "kdkomponenOutput",
+            "otherEntityName": "output",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "kd_output"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "kd_komponen",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "komponen",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "biaya_komponen",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "komponen_update",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "changelogDate": "20160530141527",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "komponen",
+    "pagination": "no"
+}

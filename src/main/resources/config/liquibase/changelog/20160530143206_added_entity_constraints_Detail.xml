@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity Detail.
+    -->
+    <changeSet id="20160530143206-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="kddetail_program_id"
+                                 baseTableName="detail"
+                                 constraintName="fk_detail_kddetailprogram_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="program"/>
+
+        <addForeignKeyConstraint baseColumnNames="kddetail_kegiatan_id"
+                                 baseTableName="detail"
+                                 constraintName="fk_detail_kddetailkegiatan_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="kegiatan"/>
+
+        <addForeignKeyConstraint baseColumnNames="kddetail_output_id"
+                                 baseTableName="detail"
+                                 constraintName="fk_detail_kddetailoutput_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="output"/>
+
+        <addForeignKeyConstraint baseColumnNames="kddetail_suboutput_id"
+                                 baseTableName="detail"
+                                 constraintName="fk_detail_kddetailsuboutput_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="suboutput"/>
+
+        <addForeignKeyConstraint baseColumnNames="kddetail_komponen_id"
+                                 baseTableName="detail"
+                                 constraintName="fk_detail_kddetailkomponen_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="komponen"/>
+
+        <addForeignKeyConstraint baseColumnNames="kddetail_subkomponen_id"
+                                 baseTableName="detail"
+                                 constraintName="fk_detail_kddetailsubkomponen_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="subkomponen"/>
+
+        <addForeignKeyConstraint baseColumnNames="kddetail_akun_id"
+                                 baseTableName="detail"
+                                 constraintName="fk_detail_kddetailakun_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="akun"/>
+
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,54 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myProgramLabel">Create or edit a Program</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.program.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.program.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="raBbvetApp.program.kd_program" for="field_kd_program">Kd Program</label>
+            <input type="text" class="form-control" name="kd_program" id="field_kd_program"
+                    ng-model="vm.program.kd_program"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_program">Program</label>
+            <input type="text" class="form-control" name="program" id="field_program"
+                    ng-model="vm.program.program"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="raBbvetApp.program.biaya_program" for="field_biaya_program">Biaya Program</label>
+            <input type="number" class="form-control" name="biaya_program" id="field_biaya_program"
+                    ng-model="vm.program.biaya_program"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="raBbvetApp.program.program_update" for="field_program_update">Program Update</label>
+                <div class="input-group">
+                    <input id="field_program_update" type="text" class="form-control" name="program_update" datetime-picker="{{dateformat}}" ng-model="vm.program.program_update" is-open="vm.datePickerOpenStatus.program_update"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('program_update')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

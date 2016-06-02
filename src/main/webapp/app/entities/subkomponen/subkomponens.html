@@ -1,0 +1,66 @@
+<div>
+    <h2>Subkomponens</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="subkomponen.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span >
+                        Create new Subkomponen
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span>ID</span></th>
+                    <th><span translate="raBbvetApp.subkomponen.kd_subkomponen">Kd Subkomponen</span></th>
+                    <th><span>Subkomponen</span></th>
+                    <th><span translate="raBbvetApp.subkomponen.biaya_subkomponen">Biaya Subkomponen</span></th>
+                    <th><span translate="raBbvetApp.subkomponen.subkomponen_update">Subkomponen Update</span></th>
+                    <th><span>Kdsub Komponen</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="subkomponen in vm.subkomponens track by subkomponen.id">
+                    <td><a ui-sref="subkomponen-detail({id:subkomponen.id})">{{subkomponen.id}}</a></td>
+                    <td>{{subkomponen.kd_subkomponen}}</td>
+                    <td>{{subkomponen.subkomponen}}</td>
+                    <td>{{subkomponen.biaya_subkomponen}}</td>
+                    <td>{{subkomponen.subkomponen_update | date:'medium'}}</td>
+                    <td>
+                        <a ui-sref="komponen-detail({id:subkomponen.kdsubKomponen.id})">{{subkomponen.kdsubKomponen.kd_komponen}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="subkomponen-detail({id:subkomponen.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="subkomponen.edit({id:subkomponen.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="subkomponen.delete({id:subkomponen.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

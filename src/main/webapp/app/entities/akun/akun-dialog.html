@@ -1,0 +1,54 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myAkunLabel">Create or edit a Akun</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.akun.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.akun.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="raBbvetApp.akun.kd_akun" for="field_kd_akun">Kd Akun</label>
+            <input type="text" class="form-control" name="kd_akun" id="field_kd_akun"
+                    ng-model="vm.akun.kd_akun"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_akun">Akun</label>
+            <input type="text" class="form-control" name="akun" id="field_akun"
+                    ng-model="vm.akun.akun"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="raBbvetApp.akun.biaya_akun" for="field_biaya_akun">Biaya Akun</label>
+            <input type="number" class="form-control" name="biaya_akun" id="field_biaya_akun"
+                    ng-model="vm.akun.biaya_akun"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="raBbvetApp.akun.akun_update" for="field_akun_update">Akun Update</label>
+                <div class="input-group">
+                    <input id="field_akun_update" type="text" class="form-control" name="akun_update" datetime-picker="{{dateformat}}" ng-model="vm.akun.akun_update" is-open="vm.datePickerOpenStatus.akun_update"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('akun_update')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

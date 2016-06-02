@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity Kegiatan.
+    -->
+    <changeSet id="20160527083659-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="kd_program_kegiatan_id"
+                                 baseTableName="kegiatan"
+                                 constraintName="fk_kegiatan_kd_programkegiatan_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="program"/>
+
+    </changeSet>
+</databaseChangeLog>

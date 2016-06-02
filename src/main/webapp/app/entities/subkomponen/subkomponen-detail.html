@@ -1,0 +1,34 @@
+
+<div>
+    <h2><span>Subkomponen</span> {{vm.subkomponen.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="raBbvetApp.subkomponen.kd_subkomponen">Kd Subkomponen</span></dt>
+        <dd>
+            <span>{{vm.subkomponen.kd_subkomponen}}</span>
+        </dd>
+        <dt><span>Subkomponen</span></dt>
+        <dd>
+            <span>{{vm.subkomponen.subkomponen}}</span>
+        </dd>
+        <dt><span translate="raBbvetApp.subkomponen.biaya_subkomponen">Biaya Subkomponen</span></dt>
+        <dd>
+            <span>{{vm.subkomponen.biaya_subkomponen}}</span>
+        </dd>
+        <dt><span translate="raBbvetApp.subkomponen.subkomponen_update">Subkomponen Update</span></dt>
+        <dd>
+            <span>{{vm.subkomponen.subkomponen_update | date:'medium'}}</span>
+        </dd>
+        <dt><span>Kdsub Komponen</span></dt>
+        <dd>
+            <a ui-sref="komponen-detail({id:vm.subkomponen.kdsubKomponen.id})">{{vm.subkomponen.kdsubKomponen.kd_komponen}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+</div>

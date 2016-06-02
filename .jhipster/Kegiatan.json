@@ -1,0 +1,33 @@
+{
+    "relationships": [
+        {
+            "relationshipName": "kd_programKegiatan",
+            "otherEntityName": "program",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "kd_program"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "kd_kegiatan",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "kegiatan",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "biaya_kegiatan",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "kegiatan_update",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "changelogDate": "20160527083659",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "kegiatan",
+    "pagination": "no"
+}
